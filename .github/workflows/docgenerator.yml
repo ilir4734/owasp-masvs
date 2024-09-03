@@ -161,7 +161,7 @@ jobs:
     needs: [en, de, fa, es, fr, hi, ja, ko, ptbr, ptpt, ru, zhcn, zhtw, export]
     if: startsWith(github.ref, 'refs/tags/') && (github.actor == 'cpholguera' || github.actor == 'sushi2k')
     steps:
-      - uses: actions/download-artifact@v2
+      - uses: actions/download-artifact@v4.1.7
 
       - name: Move all translations (pdf, epub and docx) to root
         run: mv OWASP_MASVS-*-*/* .
